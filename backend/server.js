@@ -21,7 +21,14 @@ const app = express();
 const server = http.createServer(app);
 export const io = new SocketIOServer(server, { cors: { origin: '*' } });
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173", // Vite default dev server
+    "https://rainbow-klepon-4c883f.netlify.app"
+  ],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // include PATCH
+  credentials: true
+}));
 app.use(express.json());
 
 // routes

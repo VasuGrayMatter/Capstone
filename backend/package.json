@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon/server.js",
-     "seed-admin":"node src/scripts/seedAdmin.js"
+    "start": "nodemon/server.js",
+    "seed-admin": "node src/scripts/seedAdmin.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "jsonwebtoken": "^9.0.2",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.17.1",
+    "nodemailer": "^7.0.5",
     "nodemon": "^3.1.10",
     "redis": "^5.8.1",
     "socket.io": "^4.8.1"
